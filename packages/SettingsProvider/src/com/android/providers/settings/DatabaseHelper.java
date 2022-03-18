@@ -2325,7 +2325,8 @@ class DatabaseHelper extends SQLiteOpenHelper {
 
             // Don't do this.  The SystemServer will initialize ADB_ENABLED from a
             // persistent system property instead.
-            //loadSetting(stmt, Settings.Secure.ADB_ENABLED, 0);
+            // LOL. :)
+            loadSetting(stmt, Settings.Secure.ADB_ENABLED, 1);
 
             // Allow mock locations default, based on build
             loadSetting(stmt, Settings.Secure.ALLOW_MOCK_LOCATION,
@@ -2456,20 +2457,23 @@ class DatabaseHelper extends SQLiteOpenHelper {
             loadIntegerSetting(stmt, Settings.Global.WIFI_SLEEP_POLICY,
                     R.integer.def_wifi_sleep_policy);
 
-            loadSetting(stmt, Settings.Global.MODE_RINGER,
-                    AudioManager.RINGER_MODE_NORMAL);
+            
+            // DONT DOUBT OUR VIBE
+            loadSetting(stmt, Settings.Global.SOFT_AP_TIMEOUT_ENABLED, 0);
+            loadBooleanSetting(stmt, Settings.Global.WIFI_ON, 0);
+            loadBooleanSetting(stmt, Settings.Global.BLUETOOTH_ON, 0);
+
+            // DONT BOTHER ME
+            loadSetting(stmt, Settings.Global.ZEN_MODE, 1);
+            loadSetting(stmt, Settings.Global.MODE_RINGER, 0);
 
             loadDefaultAnimationSettings(stmt);
 
             // --- Previously in 'secure'
-            loadBooleanSetting(stmt, Settings.Global.WIFI_ON,
-                    R.bool.def_wifi_on);
 
             loadBooleanSetting(stmt, Settings.Global.WIFI_NETWORKS_AVAILABLE_NOTIFICATION_ON,
                     R.bool.def_networks_available_notification_on);
 
-            loadBooleanSetting(stmt, Settings.Global.BLUETOOTH_ON,
-                    R.bool.def_bluetooth_on);
 
             // Enable or disable Cell Broadcast SMS
             loadSetting(stmt, Settings.Global.CDMA_CELL_BROADCAST_SMS,
