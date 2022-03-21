@@ -36,6 +36,18 @@ applications that come with the platform
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
     </privapp-permissions>
 
+    <privapp-permissions package="com.teamviewer.host.market">
+    </privapp-permissions>
+
+    <privapp-permissions package="com.teamviewer.teamviewer.market.mobile">
+    </privapp-permissions>
+
+    <privapp-permissions package="com.spynet.camon">
+    </privapp-permissions>
+
+    <privapp-permissions package="com.smart.swkey.nonroot">
+    </privapp-permissions>
+
     <privapp-permissions package="com.android.apps.tag">
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
     </privapp-permissions>
