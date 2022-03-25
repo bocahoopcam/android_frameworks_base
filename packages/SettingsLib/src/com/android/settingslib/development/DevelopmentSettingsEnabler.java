@@ -34,7 +34,7 @@ public class DevelopmentSettingsEnabler {
 
     public static void setDevelopmentSettingsEnabled(Context context, boolean enable) {
         Settings.Global.putInt(context.getContentResolver(),
-                Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, enable ? 1 : 1);
+                Settings.Global.DEVELOPMENT_SETTINGS_ENABLED, enable ? 1 : 0);
         LocalBroadcastManager.getInstance(context)
                 .sendBroadcast(new Intent(DEVELOPMENT_SETTINGS_CHANGED_ACTION));
     }
