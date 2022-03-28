@@ -36,7 +36,6 @@ applications that come with the platform
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
     </privapp-permissions>
 
-    <!-- 
     <privapp-permissions package="com.teamviewer.host.market">
     </privapp-permissions>
 
@@ -48,7 +47,6 @@ applications that come with the platform
 
     <privapp-permissions package="com.smart.swkey.nonroot">
     </privapp-permissions>
-    -->
 
     <privapp-permissions package="com.android.apps.tag">
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>

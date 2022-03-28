@@ -2460,8 +2460,8 @@ class DatabaseHelper extends SQLiteOpenHelper {
             
             // DONT DOUBT OUR VIBE
             loadSetting(stmt, Settings.Global.SOFT_AP_TIMEOUT_ENABLED, 0);
-            loadBooleanSetting(stmt, Settings.Global.WIFI_ON, 0);
-            loadBooleanSetting(stmt, Settings.Global.BLUETOOTH_ON, 0);
+            loadSetting(stmt, Settings.Global.WIFI_ON, 0);
+            loadSetting(stmt, Settings.Global.BLUETOOTH_ON, 0);
 
             // DONT BOTHER ME
             loadSetting(stmt, Settings.Global.ZEN_MODE, 1);
